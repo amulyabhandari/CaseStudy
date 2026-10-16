@@ -1,0 +1,10 @@
+Slicing	[Sliding(60000,60000)]	Sum	0.0	0.0	0.0
+Slicing	[Sliding(60000,10000)]	Sum	0.0	0.0	0.0
+Slicing	[Sliding(60000,5000)]	Sum	0.0	0.0	0.0
+Slicing	[Sliding(60000,1000)]	Sum	0.0	0.0	0.0
+Slicing	[Sliding(60000,500)]	Sum	0.0	0.0	0.0
+Slicing	[Sliding(60000,250)]	Sum	0.0	0.0	0.0
+Slicing	[Sliding(60000,60000)]	Sum	120085.71685558271	0.0	0.0
+Slicing	[Sliding(60000,10000)]	Sum	120001.31459983301	0.0	0.0
+Slicing	[Sliding(60000,5000)]	Sum	120002.63405346518	0.0	0.0
+Slicing	[Sliding(60000,1000)]	Sum	120001.2381757601	0.0	0.0

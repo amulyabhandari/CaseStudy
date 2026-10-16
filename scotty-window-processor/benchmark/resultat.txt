@@ -1,0 +1,161 @@
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.google.inject.internal.aop.HiddenClassDefiner (file:/opt/homebrew/Cellar/maven/3.9.11/libexec/lib/guice-5.1.0-classes.jar)
+WARNING: Please consider reporting this to the maintainers of class com.google.inject.internal.aop.HiddenClassDefiner
+WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< stream.scotty:benchmark >-----------------------
+[INFO] Building benchmark 0.4
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] 1 problem was encountered while building the effective model for org.javassist:javassist:jar:3.19.0-GA during dependency collection step for project (use -X to see details)
+[INFO] 
+[INFO] --- exec:3.6.3:java (default-cli) @ benchmark ---
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+[(12443,1000), (16386,1000), (28328,1000), (50315,1000), (62941,1000), (63138,1000), (67585,1000), (91503,1000), (93544,1000), (93983,1000)]
+
+
+
+
+
+
+
+
+Start Benchmark Flink with windows [[Sliding(60000,60000)], [Sliding(60000,10000)], [Sliding(60000,5000)], [Sliding(60000,1000)], [Sliding(60000,500)], [Sliding(60000,250)]]
+
+
+
+
+
+
+
+
+Generated Windows: 1 [SlidingWindow{measure=Time, size=60000, slide=60000}]
+org.apache.flink.util.FlinkException: Could not create the DispatcherResourceManagerComponent.
+	at org.apache.flink.runtime.entrypoint.component.AbstractDispatcherResourceManagerComponentFactory.create(AbstractDispatcherResourceManagerComponentFactory.java:257)
+	at org.apache.flink.runtime.minicluster.MiniCluster.createDispatcherResourceManagerComponents(MiniCluster.java:378)
+	at org.apache.flink.runtime.minicluster.MiniCluster.start(MiniCluster.java:313)
+	at org.apache.flink.streaming.api.environment.LocalStreamEnvironment.execute(LocalStreamEnvironment.java:114)
+	at org.apache.flink.streaming.api.environment.StreamExecutionEnvironment.execute(StreamExecutionEnvironment.java:1507)
+	at org.apache.flink.streaming.api.environment.StreamExecutionEnvironment.execute(StreamExecutionEnvironment.java:1489)
+	at stream.scotty.flinkBenchmark.FlinkBenchmarkJob.<init>(FlinkBenchmarkJob.java:73)
+	at stream.scotty.flinkBenchmark.BenchmarkRunner.main(BenchmarkRunner.java:59)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.codehaus.mojo.exec.AbstractExecJavaBase.executeMainMethod(AbstractExecJavaBase.java:402)
+	at org.codehaus.mojo.exec.ExecJavaMojo.executeMainMethod(ExecJavaMojo.java:142)
+	at org.codehaus.mojo.exec.AbstractExecJavaBase.doExecClassLoader(AbstractExecJavaBase.java:377)
+	at org.codehaus.mojo.exec.AbstractExecJavaBase.lambda$execute$0(AbstractExecJavaBase.java:287)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: java.net.BindException: Could not start rest endpoint on any port in port range 8081
+	at org.apache.flink.runtime.rest.RestServerEndpoint.start(RestServerEndpoint.java:219)
+	at org.apache.flink.runtime.entrypoint.component.AbstractDispatcherResourceManagerComponentFactory.create(AbstractDispatcherResourceManagerComponentFactory.java:161)
+	... 14 more
+
+Throughput Mean: NaN
+
+Latency Mean (ms): 0.0
+
+
+
+
+
+
+
+
+Start Benchmark Flink with windows [[Sliding(60000,60000)], [Sliding(60000,10000)], [Sliding(60000,5000)], [Sliding(60000,1000)], [Sliding(60000,500)], [Sliding(60000,250)]]
+
+
+
+
+
+
+
+
+Generated Windows: 1 [SlidingWindow{measure=Time, size=60000, slide=10000}]
+org.apache.flink.util.FlinkException: Could not create the DispatcherResourceManagerComponent.
+	at org.apache.flink.runtime.entrypoint.component.AbstractDispatcherResourceManagerComponentFactory.create(AbstractDispatcherResourceManagerComponentFactory.java:257)
+	at org.apache.flink.runtime.minicluster.MiniCluster.createDispatcherResourceManagerComponents(MiniCluster.java:378)
+	at org.apache.flink.runtime.minicluster.MiniCluster.start(MiniCluster.java:313)
+	at org.apache.flink.streaming.api.environment.LocalStreamEnvironment.execute(LocalStreamEnvironment.java:114)
+	at org.apache.flink.streaming.api.environment.StreamExecutionEnvironment.execute(StreamExecutionEnvironment.java:1507)
+	at org.apache.flink.streaming.api.environment.StreamExecutionEnvironment.execute(StreamExecutionEnvironment.java:1489)
+	at stream.scotty.flinkBenchmark.FlinkBenchmarkJob.<init>(FlinkBenchmarkJob.java:73)
+	at stream.scotty.flinkBenchmark.BenchmarkRunner.main(BenchmarkRunner.java:59)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.codehaus.mojo.exec.AbstractExecJavaBase.executeMainMethod(AbstractExecJavaBase.java:402)
+	at org.codehaus.mojo.exec.ExecJavaMojo.executeMainMethod(ExecJavaMojo.java:142)
+	at org.codehaus.mojo.exec.AbstractExecJavaBase.doExecClassLoader(AbstractExecJavaBase.java:377)
+	at org.codehaus.mojo.exec.AbstractExecJavaBase.lambda$execute$0(AbstractExecJavaBase.java:287)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: java.net.BindException: Could not start rest endpoint on any port in port range 8081
+	at org.apache.flink.runtime.rest.RestServerEndpoint.start(RestServerEndpoint.java:219)
+	at org.apache.flink.runtime.entrypoint.component.AbstractDispatcherResourceManagerComponentFactory.create(AbstractDispatcherResourceManagerComponentFactory.java:161)
+	... 14 more
+
+Throughput Mean: NaN
+
+Latency Mean (ms): 0.0
+
+
+
+
+
+
+
+
+Start Benchmark Flink with windows [[Sliding(60000,60000)], [Sliding(60000,10000)], [Sliding(60000,5000)], [Sliding(60000,1000)], [Sliding(60000,500)], [Sliding(60000,250)]]
+
+
+
+
+
+
+
+
+Generated Windows: 1 [SlidingWindow{measure=Time, size=60000, slide=5000}]
+org.apache.flink.util.FlinkException: Could not create the DispatcherResourceManagerComponent.
+	at org.apache.flink.runtime.entrypoint.component.AbstractDispatcherResourceManagerComponentFactory.create(AbstractDispatcherResourceManagerComponentFactory.java:257)
+	at org.apache.flink.runtime.minicluster.MiniCluster.createDispatcherResourceManagerComponents(MiniCluster.java:378)
+	at org.apache.flink.runtime.minicluster.MiniCluster.start(MiniCluster.java:313)
+	at org.apache.flink.streaming.api.environment.LocalStreamEnvironment.execute(LocalStreamEnvironment.java:114)
+	at org.apache.flink.streaming.api.environment.StreamExecutionEnvironment.execute(StreamExecutionEnvironment.java:1507)
+	at org.apache.flink.streaming.api.environment.StreamExecutionEnvironment.execute(StreamExecutionEnvironment.java:1489)
+	at stream.scotty.flinkBenchmark.FlinkBenchmarkJob.<init>(FlinkBenchmarkJob.java:73)
+	at stream.scotty.flinkBenchmark.BenchmarkRunner.main(BenchmarkRunner.java:59)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.codehaus.mojo.exec.AbstractExecJavaBase.executeMainMethod(AbstractExecJavaBase.java:402)
+	at org.codehaus.mojo.exec.ExecJavaMojo.executeMainMethod(ExecJavaMojo.java:142)
+	at org.codehaus.mojo.exec.AbstractExecJavaBase.doExecClassLoader(AbstractExecJavaBase.java:377)
+	at org.codehaus.mojo.exec.AbstractExecJavaBase.lambda$execute$0(AbstractExecJavaBase.java:287)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: java.net.BindException: Could not start rest endpoint on any port in port range 8081
+	at org.apache.flink.runtime.rest.RestServerEndpoint.start(RestServerEndpoint.java:219)
+	at org.apache.flink.runtime.entrypoint.component.AbstractDispatcherResourceManagerComponentFactory.create(AbstractDispatcherResourceManagerComponentFactory.java:161)
+	... 14 more
+
+Throughput Mean: NaN
+
+Latency Mean (ms): 0.0
+
+
+
+
+
+
+
+
+Start Benchmark Flink with windows [[Sliding(60000,60000)], [Sliding(60000,10000)], [Sliding(60000,5000)], [Sliding(60000,1000)], [Sliding(60000,500)], [Sliding(60000,250)]]
+
+
+
+
+
+
+
+
+Generated Windows: 1 [SlidingWindow{measure=Time, size=60000, slide=1000}]

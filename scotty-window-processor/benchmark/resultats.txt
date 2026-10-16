@@ -1,0 +1,170 @@
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.google.inject.internal.aop.HiddenClassDefiner (file:/opt/homebrew/Cellar/maven/3.9.11/libexec/lib/guice-5.1.0-classes.jar)
+WARNING: Please consider reporting this to the maintainers of class com.google.inject.internal.aop.HiddenClassDefiner
+WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< stream.scotty:benchmark >-----------------------
+[INFO] Building benchmark 0.4
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] 1 problem was encountered while building the effective model for org.javassist:javassist:jar:3.19.0-GA during dependency collection step for project (use -X to see details)
+[INFO] 
+[INFO] --- exec:3.6.3:java (default-cli) @ benchmark ---
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+[(12443,1000), (16386,1000), (28328,1000), (50315,1000), (62941,1000), (63138,1000), (67585,1000), (91503,1000), (93544,1000), (93983,1000)]
+
+
+
+
+
+
+
+
+Start Benchmark Flink with windows [[Sliding(60000,60000)], [Sliding(60000,10000)], [Sliding(60000,5000)], [Sliding(60000,1000)], [Sliding(60000,500)], [Sliding(60000,250)]]
+
+
+
+
+
+
+
+
+Generated Windows: 1 [SlidingWindow{measure=Time, size=60000, slide=60000}]
+
+Throughput Mean: 1045413.1879584542
+
+Throughput débité: 119540.4608597872 evts/s
+
+Latency Mean (ms): 206.0
+
+
+
+
+
+
+
+
+Start Benchmark Flink with windows [[Sliding(60000,60000)], [Sliding(60000,10000)], [Sliding(60000,5000)], [Sliding(60000,1000)], [Sliding(60000,500)], [Sliding(60000,250)]]
+
+
+
+
+
+
+
+
+Generated Windows: 1 [SlidingWindow{measure=Time, size=60000, slide=10000}]
+
+Throughput Mean: 1884624.8497812648
+
+Throughput débité: 119517.9583453274 evts/s
+
+Latency Mean (ms): 311.46153846153845
+
+
+
+
+
+
+
+
+Start Benchmark Flink with windows [[Sliding(60000,60000)], [Sliding(60000,10000)], [Sliding(60000,5000)], [Sliding(60000,1000)], [Sliding(60000,500)], [Sliding(60000,250)]]
+
+
+
+
+
+
+
+
+Generated Windows: 1 [SlidingWindow{measure=Time, size=60000, slide=5000}]
+
+Throughput Mean: 1109686.5079021165
+
+Throughput débité: 119540.77396295794 evts/s
+
+Latency Mean (ms): 438.4230769230769
+
+
+
+
+
+
+
+
+Start Benchmark Flink with windows [[Sliding(60000,60000)], [Sliding(60000,10000)], [Sliding(60000,5000)], [Sliding(60000,1000)], [Sliding(60000,500)], [Sliding(60000,250)]]
+
+
+
+
+
+
+
+
+Generated Windows: 1 [SlidingWindow{measure=Time, size=60000, slide=1000}]
+
+Throughput Mean: 186206.96729752983
+
+Throughput débité: 119810.02506349277 evts/s
+
+Latency Mean (ms): 106.57307692307693
+
+
+
+
+
+
+
+
+Start Benchmark Flink with windows [[Sliding(60000,60000)], [Sliding(60000,10000)], [Sliding(60000,5000)], [Sliding(60000,1000)], [Sliding(60000,500)], [Sliding(60000,250)]]
+
+
+
+
+
+
+
+
+Generated Windows: 1 [SlidingWindow{measure=Time, size=60000, slide=500}]
+
+Throughput Mean: 110529.98436691533
+
+Throughput débité: 103631.55434763165 evts/s
+
+Latency Mean (ms): 138.58076923076922
+
+
+
+
+
+
+
+
+Start Benchmark Flink with windows [[Sliding(60000,60000)], [Sliding(60000,10000)], [Sliding(60000,5000)], [Sliding(60000,1000)], [Sliding(60000,500)], [Sliding(60000,250)]]
+
+
+
+
+
+
+
+
+Generated Windows: 1 [SlidingWindow{measure=Time, size=60000, slide=250}]
+
+Throughput Mean: 57795.29304718712
+
+Throughput débité: 50244.99445248586 evts/s
+
+Latency Mean (ms): 208.42267050912585
+[WARNING] thread Thread[#84,FlinkCompletableFutureDelayScheduler-thread-1,5,stream.scotty.flinkBenchmark.BenchmarkRunner] was interrupted but is still alive after waiting at least 14999msecs
+[WARNING] thread Thread[#84,FlinkCompletableFutureDelayScheduler-thread-1,5,stream.scotty.flinkBenchmark.BenchmarkRunner] will linger despite being asked to die via interruption
+[WARNING] NOTE: 1 thread(s) did not finish despite being asked to via interruption. This is not a problem with exec:java, it is a problem with the running code. Although not serious, it should be remedied.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  21:17 min
+[INFO] Finished at: 2026-01-15T16:37:27+01:00
+[INFO] ------------------------------------------------------------------------
